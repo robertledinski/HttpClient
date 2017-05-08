@@ -14,6 +14,7 @@ namespace HttpClient_Proxy
         {
             Proxy proxy;
             HttpClientHandler handler;
+            // proxy Url
             string proxyUrl = "";
 
             proxy = new Proxy(proxyUrl);
@@ -24,6 +25,7 @@ namespace HttpClient_Proxy
 
             HttpClient httpClient = new HttpClient(handler);
 
+            // targeted server Url
             Uri requestUri = new Uri("", UriKind.Absolute);
 
             Task<HttpResponseMessage> httpMsg = null;
